@@ -1,5 +1,6 @@
 defmodule Awex do
   use HTTPoison.Base
+  alias Mix.Tasks.Iex
   alias Awex.Client
   alias Jason
 
@@ -24,7 +25,9 @@ defmodule Awex do
 
   @spec process_response_body(binary) :: term
   def process_response_body(""), do: nil
-  def process_response_body(body), do: Jason.decode!(body, deserialization_options())
+  def process_response_body(body) do
+    Jason.decode!(body, deserialization_options())
+  end
 
   @spec process_response(HTTPoison.Response.t() | {integer, any, HTTPoison.Response.t()}) ::
           response
@@ -88,8 +91,8 @@ defmodule Awex do
       |> add_params_to_url(params)
 
     case pagination(options) do
-      nil -> request_stream(:get, url, client.auth)
-      :none -> request_stream(:get, url, client.auth, "", :one_page)
+      nil -> _request(:get, url, client.auth)
+      :none -> _request(:get, url, client.auth)
       :auto -> request_stream(:get, url, client.auth)
       :stream -> request_stream(:get, url, client.auth, "", :stream)
       :manual -> request_with_pagination(:get, url, client.auth)
@@ -103,7 +106,10 @@ defmodule Awex do
 
   @spec json_request(atom, binary, any, keyword, keyword) :: response
   def json_request(method, url, body \\ "", headers \\ [], options \\ []) do
-    raw_request(method, url, Jason.encode!(body), headers, options)
+    case method do
+      :get -> raw_request(method, url, body, headers, options)
+      _ -> raw_request(method, url, Jason.encode!(body), headers, options)
+    end
   end
 
   defp extra_options do

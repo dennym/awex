@@ -14,8 +14,8 @@ defmodule Awex.Jobs do
   More info at: https://docs.ansible.com/ansible-tower/latest/html/towerapi/api_ref.html#/Jobs/Jobs_jobs_read_0
   """
   @spec find(Client.t(), binary) :: Awex.response()
-  def find(client \\ %Client{}, job) do
-    get("jobs/#{job}", client)
+  def find(client \\ %Client{}, job_id) do
+    get("jobs/#{job_id}", client)
   end
 
   @doc """
