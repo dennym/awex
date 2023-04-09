@@ -6,7 +6,7 @@ defmodule Awex.ClientTest do
 
   test "default endpoint from config" do
     client = new()
-    assert client.endpoint == "https://local.dev:1234/"
+    assert client.endpoint == "http://awx.local.dev/api/v2/"
 
   end
 

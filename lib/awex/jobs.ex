@@ -8,8 +8,8 @@ defmodule Awex.Jobs do
 
   ## Example
 
-      Awex.Jobs.find client, "edgurgel"
-      Awex.Jobs.find client, "iurifq"
+      Awex.Jobs.find client, "1234"
+      Awex.Jobs.find client, "4321"
 
   More info at: https://docs.ansible.com/ansible-tower/latest/html/towerapi/api_ref.html#/Jobs/Jobs_jobs_read_0
   """
@@ -21,11 +21,11 @@ defmodule Awex.Jobs do
   @doc """
   Get all users.
   ## Example
-      Tentacat.Users.list
-      Tentacat.Users.list client
+      Awex.Jobs.list
+      Awex.Jobs.list client
   More info at: http://developer.github.com/v3/users/#get-all-users
   """
-  @spec list(Client.t(), any) :: Tentacat.response()
+  @spec list(Client.t(), any) :: Awex.response()
   def list(client \\ %Client{}, options \\ []) do
     get("jobs", client, [], Keyword.merge([pagination: :none], options))
   end

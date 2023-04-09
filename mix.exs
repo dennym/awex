@@ -35,7 +35,10 @@ defmodule Awex.MixProject do
   defp deps do
     [
       {:httpoison, "~> 2.0"},
-      {:jason, "~> 1.4"}
+      {:jason, "~> 1.4"},
+      {:inch_ex, github: "rrrene/inch_ex", only: [:dev, :test]},
+      {:exvcr, "~> 0.13.5", only: :test},
+      {:meck, "~> 0.9.2", only: :test}
     ]
   end
 end

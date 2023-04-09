@@ -1,13 +1,11 @@
 defmodule Awex.Client do
-  defstruct auth: nil, endpoint: nil
+  defstruct auth: nil, endpoint: "http://awx.local.dev/api/v2/"
 
   @type auth :: %{user: binary, password: binary} | %{access_token: binary}
   @type t :: %__MODULE__{auth: auth | nil, endpoint: binary}
 
   @spec new() :: t
-  def new() do
-    pnew(nil, Application.get_env(:awex, :endpoint))
-  end
+  def new(), do: %__MODULE__{}
 
   @spec new(binary) :: t
   def new(endpoint) when is_binary(endpoint) do
@@ -30,11 +28,6 @@ defmodule Awex.Client do
 
   @spec new(map(), binary) :: t
   def new(auth = %{user: _, password: _}, endpoint) do
-    pnew(auth, endpoint)
-  end
-
-  @spec new(map(), binary) :: t
-  def new(auth = %{jwt: _}, endpoint) do
     pnew(auth, endpoint)
   end
 
