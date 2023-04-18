@@ -1,0 +1,47 @@
+b[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "User-agent": "awex",
+        "Content-Type": "application/json",
+        "Authorization": "Basic YWRtaW46MTIzNA=="
+      },
+      "method": "get",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "http://192.168.49.2:31350/api/v2/jobs"
+    },
+    "response": {
+      "binary": false,
+      "body": "[]",
+      "headers": {
+        "Server": "nginx",
+        "Date": "Sun, 09 Apr 2023 15:54:29 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "3163",
+        "Connection": "keep-alive",
+        "Vary": "Accept, Accept-Language, Origin, Cookie",
+        "Allow": "GET, HEAD, OPTIONS",
+        "X-API-Product-Version": "21.13.0",
+        "X-API-Product-Name": "AWX",
+        "X-API-Node": "awx-local-c765fccf5-q9xd2",
+        "X-API-Time": "0.198s",
+        "Content-Language": "en",
+        "X-API-Total-Time": "0.222s",
+        "X-API-Request-Id": "287e7767472e4d6faff12f179ae670f0",
+        "Access-Control-Expose-Headers": "X-API-Request-Id",
+        "Strict-Transport-Security": "max-age=15768000",
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff",
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        "Expires": "0",
+        "Pragma": "no-cache"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

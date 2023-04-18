@@ -1,0 +1,47 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "User-agent": "awex",
+        "Content-Type": "application/json",
+        "Authorization": "Basic YWRtaW46MTIzNA=="
+      },
+      "method": "get",
+      "options": {
+        "follow_redirect": "true"
+      },
+      "request_body": "",
+      "url": "http://192.168.49.2:31350/api/v2/jobs/1"
+    },
+    "response": {
+      "binary": false,
+      "body": "{\"id\":1,\"type\":\"job\",\"url\":\"/api/v2/jobs/1/\",\"related\":{\"created_by\":\"/api/v2/users/1/\",\"labels\":\"/api/v2/jobs/1/labels/\",\"inventory\":\"/api/v2/inventories/1/\",\"project\":\"/api/v2/projects/6/\",\"organization\":\"/api/v2/organizations/1/\",\"credentials\":\"/api/v2/jobs/1/credentials/\",\"unified_job_template\":\"/api/v2/job_templates/7/\",\"stdout\":\"/api/v2/jobs/1/stdout/\",\"execution_environment\":\"/api/v2/execution_environments/1/\",\"job_events\":\"/api/v2/jobs/1/job_events/\",\"job_host_summaries\":\"/api/v2/jobs/1/job_host_summaries/\",\"activity_stream\":\"/api/v2/jobs/1/activity_stream/\",\"notifications\":\"/api/v2/jobs/1/notifications/\",\"create_schedule\":\"/api/v2/jobs/1/create_schedule/\",\"job_template\":\"/api/v2/job_templates/7/\",\"cancel\":\"/api/v2/jobs/1/cancel/\",\"project_update\":\"/api/v2/project_updates/2/\",\"relaunch\":\"/api/v2/jobs/1/relaunch/\"},\"summary_fields\":{\"organization\":{\"id\":1,\"name\":\"Default\",\"description\":\"\"},\"inventory\":{\"id\":1,\"name\":\"Demo Inventory\",\"description\":\"\",\"has_active_failures\":false,\"total_hosts\":1,\"hosts_with_active_failures\":0,\"total_groups\":0,\"has_inventory_sources\":false,\"total_inventory_sources\":0,\"inventory_sources_with_failures\":0,\"organization_id\":1,\"kind\":\"\"},\"execution_environment\":{\"id\":1,\"name\":\"AWX EE (latest)\",\"description\":\"\",\"image\":\"quay.io/ansible/awx-ee:latest\"},\"project\":{\"id\":6,\"name\":\"Demo Project\",\"description\":\"\",\"status\":\"successful\",\"scm_type\":\"git\",\"allow_override\":false},\"project_update\":{\"id\":2,\"name\":\"Demo Project\",\"description\":\"\",\"status\":\"successful\",\"failed\":false},\"job_template\":{\"id\":7,\"name\":\"Demo Job Template\",\"description\":\"\"},\"unified_job_template\":{\"id\":7,\"name\":\"Demo Job Template\",\"description\":\"\",\"unified_job_type\":\"job\"},\"instance_group\":{\"id\":2,\"name\":\"default\",\"is_container_group\":true},\"created_by\":{\"id\":1,\"username\":\"admin\",\"first_name\":\"\",\"last_name\":\"\"},\"user_capabilities\":{\"delete\":true,\"start\":true},\"labels\":{\"count\":0,\"results\":[]},\"credentials\":[{\"id\":1,\"name\":\"Demo Credential\",\"description\":\"\",\"kind\":\"ssh\",\"cloud\":false}]},\"created\":\"2023-04-08T16:51:02.574620Z\",\"modified\":\"2023-04-08T16:51:02.797268Z\",\"name\":\"Demo Job Template\",\"description\":\"\",\"job_type\":\"run\",\"inventory\":1,\"project\":6,\"playbook\":\"hello_world.yml\",\"scm_branch\":\"\",\"forks\":0,\"limit\":\"\",\"verbosity\":0,\"extra_vars\":\"{}\",\"job_tags\":\"\",\"force_handlers\":false,\"skip_tags\":\"\",\"start_at_task\":\"\",\"timeout\":0,\"use_fact_cache\":false,\"organization\":1,\"unified_job_template\":7,\"launch_type\":\"manual\",\"status\":\"successful\",\"execution_environment\":1,\"failed\":false,\"started\":\"2023-04-08T16:51:02.903062Z\",\"finished\":\"2023-04-08T16:51:50.340747Z\",\"canceled_on\":null,\"elapsed\":47.438,\"job_args\":\"[\\\"ansible-playbook\\\", \\\"-u\\\", \\\"admin\\\", \\\"-i\\\", \\\"/runner/inventory/hosts\\\", \\\"-e\\\", \\\"@/runner/env/extravars\\\", \\\"hello_world.yml\\\"]\",\"job_cwd\":\"/runner/project\",\"job_env\":{\"KUBERNETES_SERVICE_PORT_HTTPS\":\"443\",\"KUBERNETES_SERVICE_PORT\":\"443\",\"AWX_OPERATOR_CONTROLLER_MANAGER_METRICS_SERVICE_SERVICE_HOST\":\"10.101.250.97\",\"HOSTNAME\":\"automation-job-1-6mc7l\",\"AWX_LOCAL_SERVICE_SERVICE_PORT_HTTP\":\"80\",\"AWX_LOCAL_SERVICE_PORT_80_TCP\":\"tcp://10.99.13.251:80\",\"AWX_LOCAL_SERVICE_SERVICE_HOST\":\"10.99.13.251\",\"PWD\":\"/runner\",\"AWX_OPERATOR_CONTROLLER_MANAGER_METRICS_SERVICE_PORT_8443_TCP_PORT\":\"8443\",\"AWX_LOCAL_SERVICE_SERVICE_PORT\":\"80\",\"AWX_OPERATOR_CONTROLLER_MANAGER_METRICS_SERVICE_PORT_8443_TCP_PROTO\":\"tcp\",\"HOME\":\"/home/runner\",\"KUBERNETES_PORT_443_TCP\":\"tcp://10.96.0.1:443\",\"AWX_LOCAL_SERVICE_PORT_80_TCP_PROTO\":\"tcp\",\"AWX_OPERATOR_CONTROLLER_MANAGER_METRICS_SERVICE_PORT\":\"tcp://10.101.250.97:8443\",\"AWX_LOCAL_SERVICE_PORT\":\"tcp://10.99.13.251:80\",\"AWX_OPERATOR_CONTROLLER_MANAGER_METRICS_SERVICE_SERVICE_PORT_HTTPS\":\"8443\",\"AWX_LOCAL_SERVICE_PORT_80_TCP_PORT\":\"80\",\"AWX_OPERATOR_CONTROLLER_MANAGER_METRICS_SERVICE_SERVICE_PORT\":\"8443\",\"AWX_LOCAL_SERVICE_PORT_80_TCP_ADDR\":\"10.99.13.251\",\"SHLVL\":\"0\",\"KUBERNETES_PORT_443_TCP_PROTO\":\"tcp\",\"KUBERNETES_PORT_443_TCP_ADDR\":\"10.96.0.1\",\"AWX_OPERATOR_CONTROLLER_MANAGER_METRICS_SERVICE_PORT_8443_TCP\":\"tcp://10.101.250.97:8443\",\"KUBERNETES_SERVICE_HOST\":\"10.96.0.1\",\"KUBERNETES_PORT\":\"tcp://10.96.0.1:443\",\"KUBERNETES_PORT_443_TCP_PORT\":\"443\",\"PATH\":\"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin\",\"AWX_OPERATOR_CONTROLLER_MANAGER_METRICS_SERVICE_PORT_8443_TCP_ADDR\":\"10.101.250.97\",\"LC_CTYPE\":\"C.UTF-8\",\"ANSIBLE_FORCE_COLOR\":\"True\",\"ANSIBLE_HOST_KEY_CHECKING\":\"False\",\"ANSIBLE_INVENTORY_UNPARSED_FAILED\":\"True\",\"ANSIBLE_PARAMIKO_RECORD_HOST_KEYS\":\"False\",\"AWX_PRIVATE_DATA_DIR\":\"/tmp/awx_1_antlmk_8\",\"JOB_ID\":\"1\",\"INVENTORY_ID\":\"1\",\"PROJECT_REVISION\":\"347e44fea036c94d5f60e544de006453ee5c71ad\",\"ANSIBLE_RETRY_FILES_ENABLED\":\"False\",\"MAX_EVENT_RES\":\"700000\",\"AWX_HOST\":\"https://towerhost\",\"ANSIBLE_SSH_CONTROL_PATH_DIR\":\"/runner/cp\",\"ANSIBLE_COLLECTIONS_PATHS\":\"/runner/requirements_collections:~/.ansible/collections:/usr/share/ansible/collections\",\"ANSIBLE_ROLES_PATH\":\"/runner/requirements_roles:~/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles\",\"ANSIBLE_CALLBACK_PLUGINS\":\"/usr/local/lib/python3.9/site-packages/ansible_runner/display_callback/callback\",\"ANSIBLE_STDOUT_CALLBACK\":\"awx_display\",\"AWX_ISOLATED_DATA_DIR\":\"/runner/artifacts/1\",\"RUNNER_OMIT_EVENTS\":\"False\",\"RUNNER_ONLY_FAILED_EVENTS\":\"False\"},\"job_explanation\":\"\",\"execution_node\":\"\",\"controller_node\":\"awx-local-c765fccf5-q9xd2\",\"result_traceback\":\"\",\"event_processing_finished\":true,\"launched_by\":{\"id\":1,\"name\":\"admin\",\"type\":\"user\",\"url\":\"/api/v2/users/1/\"},\"work_unit_id\":\"EyTL0DY3\",\"job_template\":7,\"passwords_needed_to_start\":[],\"allow_simultaneous\":false,\"artifacts\":{},\"scm_revision\":\"347e44fea036c94d5f60e544de006453ee5c71ad\",\"instance_group\":2,\"diff_mode\":false,\"job_slice_number\":0,\"job_slice_count\":1,\"webhook_service\":\"\",\"webhook_credential\":null,\"webhook_guid\":\"\",\"host_status_counts\":{\"ok\":1},\"playbook_counts\":{\"play_count\":1,\"task_count\":2},\"custom_virtualenv\":null}",
+      "headers": {
+        "Server": "nginx",
+        "Date": "Sun, 09 Apr 2023 15:54:30 GMT",
+        "Content-Type": "application/json",
+        "Content-Length": "5875",
+        "Connection": "keep-alive",
+        "Vary": "Accept, Accept-Language, Origin, Cookie",
+        "Allow": "GET, DELETE, HEAD, OPTIONS",
+        "X-API-Product-Version": "21.13.0",
+        "X-API-Product-Name": "AWX",
+        "X-API-Node": "awx-local-c765fccf5-q9xd2",
+        "X-API-Time": "0.185s",
+        "Content-Language": "en",
+        "X-API-Total-Time": "0.209s",
+        "X-API-Request-Id": "2237f26e7d504aab80f9cb5f9c8bf78f",
+        "Access-Control-Expose-Headers": "X-API-Request-Id",
+        "Strict-Transport-Security": "max-age=15768000",
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff",
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        "Expires": "0",
+        "Pragma": "no-cache"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

@@ -2,6 +2,11 @@
 
 **TODO: Add description**
 
+## TODOS:
+
+* get pagination working and return json subfield `result` main response for lists
+* eventually switch to finch and pass the running finch application from the project supervision tree to the package 
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
