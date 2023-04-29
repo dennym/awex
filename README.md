@@ -53,6 +53,14 @@ be found at <https://hexdocs.pm/awex>.
 
 ## ⚙️ Configuration
 
+* (Optional) AWeX comes with AWeX.HTTPClient.Finch configured by default. If you want to use it, you just need to include Finch as a dependency of your app.
+
+AWeX also accepts Hackney out-of-the-box. See Swoosh.HTTPClient.Hackney for details.
+
+If you need to integrate with another HTTP client, it's easy to define a new API client. Follow the AWeX.HTTPClient behaviour and configure AWeX to use it:
+
+  config :awex, :http_client, MyApp.HTTPClient
+
 ## Todo
 
 - [:red_circle:] [ping](lib/awex/ping.ex)
