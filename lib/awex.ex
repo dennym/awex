@@ -1,7 +1,5 @@
-defmodule Awex do
-  use HTTPoison.Base
-  alias Mix.Tasks.Iex
-  alias Awex.Client
+defmodule AWeX do
+  alias AWeX.Client
   alias Jason
 
   @user_agent [{"User-agent", "awex"}]
@@ -38,6 +36,11 @@ defmodule Awex do
     do: process_response(resp)
 
   @spec delete(binary, Client.t(), any) :: response
+  def get(path, client, body \\ "") do
+    _request(:get, url(client, path), client.auth, body)
+  end
+
+  @spec delete(binary, Client.t(), any) :: response
   def delete(path, client, body \\ "") do
     _request(:delete, url(client, path), client.auth, body)
   end
@@ -57,53 +60,16 @@ defmodule Awex do
     _request(:put, url(client, path), client.auth, body)
   end
 
-  @doc """
-  Underlying utility retrieval function. The options passed affect both the
-  return value and, ultimately, the number of requests made to GitHub.
 
-  ## Options
 
-    * `:pagination` - Can be `:none`, `:manual`, `:stream`, or `:auto`. Defaults to :auto.
 
-        - `:none` will only return the first page. You won't have access to the
-          headers to manually paginate.
-
-        - `:auto` will block until all the pages have been retrieved and
-          concatenated together. Most of the time, this is what you want. For
-          example, `Tentacat.Repositories.list_users("chrismccord")` and
-          `Tentacat.Repositories.list_users("octocat")` have the same interface
-          though one call will page many times and the other not at all.
-
-        - `:stream` will return a `Stream`, prepopulated with the first page.
-
-        - `:manual` will return a 3 element tuple of `{page_body,
-          url_for_next_page, auth_credentials}`, which will allow you to control
-          the paging yourself.
-  """
-  @spec get(binary, Client.t()) :: response
-  @spec get(binary, Client.t(), keyword) :: response
-  @spec get(binary, Client.t(), keyword, keyword) ::
-          response | Enumerable.t() | pagination_response
-  def get(path, client, params \\ [], options \\ []) do
-    url =
-      client
-      |> url(path)
-      |> add_params_to_url(params)
-
-    case pagination(options) do
-      nil -> _request(:get, url, client.auth)
-      :none -> _request(:get, url, client.auth)
-      :auto -> request_stream(:get, url, client.auth)
-      :stream -> request_stream(:get, url, client.auth, "", :stream)
-      :manual -> request_with_pagination(:get, url, client.auth)
-    end
-  end
-
+  # build headers
   @spec _request(atom, binary, Client.auth(), any) :: response
   def _request(method, url, auth, body \\ "") do
     json_request(method, url, body, authorization_header(auth, @user_agent ++ @content_type))
   end
 
+  # encode
   @spec json_request(atom, binary, any, keyword, keyword) :: response
   def json_request(method, url, body \\ "", headers \\ [], options \\ []) do
     case method do
@@ -111,6 +77,13 @@ defmodule Awex do
       _ -> raw_request(method, url, Jason.encode!(body), headers, options)
     end
   end
+
+  def raw_request(method, url, body \\ "", headers \\ [], options \\ []) do
+    method
+    |> request!(url, body, extra_headers() ++ headers, extra_options() ++ options)
+    |> process_response
+  end
+
 
   defp extra_options do
     Application.get_env(:awex, :request_options, [])
@@ -122,11 +95,6 @@ defmodule Awex do
 
   defp deserialization_options do
     Application.get_env(:awex, :deserialization_options, labels: :binary)
-  end
-
-  @spec pagination(keyword) :: atom | nil
-  defp pagination(options) do
-    Keyword.get(options, :pagination, Application.get_env(:awex, :pagination, nil))
   end
 
   def raw_request(method, url, body \\ "", headers \\ [], options \\ []) do
@@ -307,10 +275,10 @@ defmodule Awex do
 
   ## Examples
 
-      iex> Awex.authorization_header(%{user: "user", password: "password"}, [])
+      iex> AWeX.authorization_header(%{user: "user", password: "password"}, [])
       [{"Authorization", "Basic dXNlcjpwYXNzd29yZA=="}]
 
-      iex> Awex.authorization_header(%{access_token: "92873971893"}, [])
+      iex> AWeX.authorization_header(%{access_token: "92873971893"}, [])
       [{"Authorization", "token 92873971893"}]
 
   More info at: http://developer.github.com/v3/#authentication

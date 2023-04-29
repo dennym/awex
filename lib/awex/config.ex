@@ -1,2 +1,2 @@
-defmodule Awex.Config do
+defmodule AWeX.Config do
 end

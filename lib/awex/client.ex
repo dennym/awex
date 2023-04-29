@@ -1,4 +1,4 @@
-defmodule Awex.Client do
+defmodule AWeX.Client do
   defstruct auth: nil, endpoint: "http://awx.local.dev/api/v2/"
 
   @type auth :: %{user: binary, password: binary} | %{access_token: binary}

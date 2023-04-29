@@ -1,2 +1,2 @@
-defmodule Awex.Credentials do
+defmodule AWeX.Credentials do
 end

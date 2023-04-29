@@ -1,15 +1,11 @@
-defmodule Awex.JobsTest do
+defmodule AWeX.JobsTest do
   use ExUnit.Case, async: false
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
-  import Awex.Jobs
+  import AWeX.Jobs
 
-  doctest Awex.Jobs
+  doctest AWeX.Jobs
 
-  @client Awex.Client.new(%{user: "admin", password: "1234"}, "http://192.168.49.2:31350/api/v2/")
-
-  setup_all do
-    HTTPoison.start()
-  end
+  @client AWeX.Client.new(%{user: "admin", password: "1234"}, "http://192.168.49.2:31350/api/v2/")
 
   test "find/2" do
     use_cassette "jobs#find" do

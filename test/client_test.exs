@@ -1,8 +1,8 @@
-defmodule Awex.ClientTest do
+defmodule AWeX.ClientTest do
   use ExUnit.Case
-  import Awex.Client
+  import AWeX.Client
 
-  doctest Awex.Client
+  doctest AWeX.Client
 
   test "default endpoint from config" do
     client = new()

@@ -1,4 +1,4 @@
-# Awex
+# AWeX
 
 **TODO: Add description**
 

@@ -1,2 +1,2 @@
-defmodule Awex.AdHocCommands do
+defmodule AWeX.AdHocCommands do
 end

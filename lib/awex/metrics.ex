@@ -1,2 +1,2 @@
-defmodule Awex.Metric do
+defmodule AWeX.Metric do
 end

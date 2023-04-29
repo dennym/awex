@@ -1,2 +1,2 @@
-defmodule Awex.Notifications do
+defmodule AWeX.Notifications do
 end

@@ -1,2 +1,2 @@
-defmodule Awex.SystemJobTemplates do
+defmodule AWeX.SystemJobTemplates do
 end

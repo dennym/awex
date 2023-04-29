@@ -1,2 +1,2 @@
-defmodule Awex.Tokens do
+defmodule AWeX.Tokens do
 end

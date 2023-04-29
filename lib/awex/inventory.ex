@@ -1,2 +1,2 @@
-defmodule Awex.Inventory do
+defmodule AWeX.Inventory do
 end

@@ -1,2 +1,2 @@
-defmodule Awex.Groups do
+defmodule AWeX.Groups do
 end

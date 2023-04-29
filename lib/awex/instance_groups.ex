@@ -1,2 +1,2 @@
-defmodule Awex.InstanceGroups do
+defmodule AWeX.InstanceGroups do
 end

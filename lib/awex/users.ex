@@ -1,2 +1,2 @@
-defmodule Awex.User do
+defmodule AWeX.User do
 end

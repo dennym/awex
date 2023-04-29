@@ -1,2 +1,2 @@
-defmodule Awex.Labels do
+defmodule AWeX.Labels do
 end

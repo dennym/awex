@@ -1,2 +1,2 @@
-defmodule Awex.CredentialInputSources do
+defmodule AWeX.CredentialInputSources do
 end

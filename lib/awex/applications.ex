@@ -1,2 +1,2 @@
-defmodule Awex.Application do
+defmodule AWeX.Application do
 end

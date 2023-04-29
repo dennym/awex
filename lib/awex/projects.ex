@@ -1,2 +1,2 @@
-defmodule Awex.Projects do
+defmodule AWeX.Projects do
 end

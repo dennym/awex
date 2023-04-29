@@ -1,2 +1,2 @@
-defmodule Awex.Roles do
+defmodule AWeX.Roles do
 end

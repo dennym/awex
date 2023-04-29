@@ -1,2 +1,2 @@
-defmodule Awex.Schedules do
+defmodule AWeX.Schedules do
 end

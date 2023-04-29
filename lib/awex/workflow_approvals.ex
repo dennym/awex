@@ -1,2 +1,2 @@
-defmodule Awex.WorkflowApprovals do
+defmodule AWeX.WorkflowApprovals do
 end

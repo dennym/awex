@@ -1,2 +1,2 @@
-defmodule Awex.WorkflowJobtemplateNodes do
+defmodule AWeX.WorkflowJobtemplateNodes do
 end

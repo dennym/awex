@@ -1,4 +1,4 @@
-defmodule Awex.MixProject do
+defmodule AWeX.MixProject do
   use Mix.Project
 
   @source_url "https://github.com/dennym/awex"
@@ -34,7 +34,7 @@ defmodule Awex.MixProject do
 
   defp deps do
     [
-      {:httpoison, "~> 2.0"},
+      {:finch, "~> 0.16"},
       {:jason, "~> 1.4"},
       {:inch_ex, github: "rrrene/inch_ex", only: [:dev, :test]},
       {:exvcr, "~> 0.13.5", only: :test},

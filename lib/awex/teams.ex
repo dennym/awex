@@ -1,2 +1,2 @@
-defmodule Awex.Teams do
+defmodule AWeX.Teams do
 end

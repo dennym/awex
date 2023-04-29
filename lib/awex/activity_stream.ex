@@ -1,2 +1,2 @@
-defmodule Awex.ActivityStream do
+defmodule AWeX.ActivityStream do
 end

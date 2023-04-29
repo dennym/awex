@@ -1,2 +1,2 @@
-defmodule Awex.MeshVisualizer do
+defmodule AWeX.MeshVisualizer do
 end

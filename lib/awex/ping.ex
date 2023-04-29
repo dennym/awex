@@ -1,2 +1,2 @@
-defmodule Awex.Ping do
+defmodule AWeX.Ping do
 end

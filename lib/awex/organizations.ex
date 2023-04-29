@@ -1,2 +1,2 @@
-defmodule Awex.Organizations do
+defmodule AWeX.Organizations do
 end

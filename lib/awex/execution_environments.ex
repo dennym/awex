@@ -1,2 +1,2 @@
-defmodule Awex.ExecutionEnvironments do
+defmodule AWeX.ExecutionEnvironments do
 end

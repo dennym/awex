@@ -1,2 +1,2 @@
-defmodule Awex.SystemJobs do
+defmodule AWeX.SystemJobs do
 end

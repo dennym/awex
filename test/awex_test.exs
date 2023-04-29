@@ -1,9 +1,9 @@
-defmodule AwexTest do
+defmodule AWeXTest do
   use ExUnit.Case
-  import Awex
+  import AWeX
   alias Jason
 
-  doctest Awex
+  doctest AWeX
 
   setup_all do
     :meck.new(Jason, [:no_link])

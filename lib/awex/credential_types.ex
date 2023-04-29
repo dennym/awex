@@ -1,2 +1,2 @@
-defmodule Awex.CredentialTypes do
+defmodule AWeX.CredentialTypes do
 end

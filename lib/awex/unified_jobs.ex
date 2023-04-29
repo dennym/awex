@@ -1,2 +1,2 @@
-defmodule Awex.UnifiedJobs do
+defmodule AWeX.UnifiedJobs do
 end

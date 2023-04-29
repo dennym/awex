@@ -1,2 +1,2 @@
-defmodule Awex.Dashboard do
+defmodule AWeX.Dashboard do
 end

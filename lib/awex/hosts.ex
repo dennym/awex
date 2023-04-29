@@ -1,2 +1,2 @@
-defmodule Awex.Hosts do
+defmodule AWeX.Hosts do
 end

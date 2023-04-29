@@ -1,2 +1,2 @@
-defmodule Awex.WorkflowJobs do
+defmodule AWeX.WorkflowJobs do
 end

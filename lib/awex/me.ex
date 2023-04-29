@@ -1,2 +1,2 @@
-defmodule Awex.Me do
+defmodule AWeX.Me do
 end

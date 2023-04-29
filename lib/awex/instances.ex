@@ -1,2 +1,2 @@
-defmodule Awex.Instances do
+defmodule AWeX.Instances do
 end
